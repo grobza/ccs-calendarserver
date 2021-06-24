@@ -810,6 +810,7 @@ class StreamProducer(object):
         if self.enforceStr:
             # XXX: sucks that we have to do this. make transport.write(buffer) work!
             data = str(buffer(data))
+        log.info("Response:\n{msg}", msg=data)
         self.consumer.write(data)
 
         if not self.paused:
