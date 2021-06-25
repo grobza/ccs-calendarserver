@@ -84,6 +84,7 @@ def davXMLFromStream(stream):
         try:
             doc = WebDAVDocument.fromString(xml)
             doc.root_element.validate()
+            log.info("Request:\n%s" % doc)
             return doc
         except ValueError:
             log.error("Bad XML:\n%s" % (xml,))

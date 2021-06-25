@@ -441,6 +441,7 @@ class _StreamReader(object):
     def _read(self):
         try:
             result = self.stream.read()
+            log.info("Request:\n%s" % str(result))
         except:
             self._gotError(Failure())
             return

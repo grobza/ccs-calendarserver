@@ -506,7 +506,7 @@ class Request(object):
                 response.stream.close()
             self._finished(None)
             return
-
+        log.info("Response:\n{msg}", msg=response)
         d = stream.StreamProducer(response.stream).beginProducing(self.chanRequest)
         d.addCallback(self._finished).addErrback(self._error)
 
