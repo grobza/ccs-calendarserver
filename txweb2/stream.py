@@ -441,6 +441,7 @@ class _StreamReader(object):
     def _read(self):
         try:
             result = self.stream.read()
+            log.info("Request:\n%s" % str(result))
         except:
             self._gotError(Failure())
             return
@@ -810,6 +811,7 @@ class StreamProducer(object):
         if self.enforceStr:
             # XXX: sucks that we have to do this. make transport.write(buffer) work!
             data = str(buffer(data))
+        log.info("Response:\n{msg}", msg=data)
         self.consumer.write(data)
 
         if not self.paused:

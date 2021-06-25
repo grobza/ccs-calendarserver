@@ -12,8 +12,8 @@ Twisted==16.6.0
     #pyOpenSSL
     service_identity==16.0.0
         characteristic==14.3.0
-        pyasn1==0.1.9
-        pyasn1-modules==0.0.8
+        pyasn1>=0.3.7
+        pyasn1-modules>=0.1.5
         #pyOpenSSL
     pycrypto==2.6.1
 
