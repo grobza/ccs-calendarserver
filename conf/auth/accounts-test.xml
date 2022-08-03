@@ -50,6 +50,7 @@ limitations under the License.
     <password>user01</password>
     <full-name>User 01</full-name>
     <email>user01@example.com</email>
+    <email>user_01@example.com</email>
 </record>
 <record type="user">
     <uid>10000000-0000-0000-0000-000000000002</uid>
